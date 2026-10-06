@@ -1,0 +1,350 @@
+/* ================================
+   General Page
+================================ */
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f5f7fa;
+    color: #222;
+}
+
+#root {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 30px;
+}
+
+
+/* ================================
+   Main Heading
+================================ */
+
+h1 {
+    text-align: center;
+    margin-bottom: 45px;
+    font-size: 38px;
+}
+
+h2 {
+    margin-top: 30px;
+    margin-bottom: 25px;
+}
+
+
+/* ================================
+   Report Form
+================================ */
+
+.pet-form {
+    background: white;
+    padding: 30px;
+    border-radius: 14px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+
+    max-width: 700px;
+}
+
+
+/* ================================
+   Form Groups
+================================ */
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+
+/* ================================
+   Inputs
+================================ */
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 11px 12px;
+    font-size: 15px;
+
+    border: 1px solid #ccc;
+    border-radius: 7px;
+
+    box-sizing: border-box;
+}
+
+
+/* Textarea */
+
+.form-group textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+
+/* File input */
+
+.form-group input[type="file"] {
+    padding: 8px;
+}
+
+
+/* ================================
+   Submit Button
+================================ */
+
+.pet-form button {
+    padding: 12px 22px;
+
+    border: none;
+    border-radius: 7px;
+
+    background-color: #333;
+    color: white;
+
+    font-size: 15px;
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+.pet-form button:hover {
+    background-color: #555;
+}
+
+
+/* ================================
+   Divider
+================================ */
+
+hr {
+    margin: 40px 0;
+    border: none;
+    border-top: 1px solid #ddd;
+}
+
+
+/* ================================
+   Search and Filter
+================================ */
+
+.search-controls {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 25px;
+}
+
+.search-controls input {
+    flex: 1;
+
+    padding: 11px 12px;
+
+    border: 1px solid #ccc;
+    border-radius: 7px;
+
+    font-size: 15px;
+}
+
+.search-controls select {
+    padding: 11px 12px;
+
+    border: 1px solid #ccc;
+    border-radius: 7px;
+
+    font-size: 15px;
+}
+
+
+/* ================================
+   Pet Cards
+================================ */
+
+.pet-card {
+    background: white;
+
+    border-radius: 14px;
+
+    overflow: hidden;
+
+    margin-bottom: 25px;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+
+/* Pet image */
+
+.pet-image {
+    width: 100%;
+    height: auto;
+    max-height: 500px;
+
+    object-fit: contain;
+    object-position: center;
+
+    display: block;
+    background-color: #f5f7fa;
+}
+
+
+/* Card content */
+
+.pet-card-content {
+    padding: 22px;
+}
+
+.pet-card-content h3 {
+    margin-top: 12px;
+    margin-bottom: 15px;
+
+    font-size: 24px;
+}
+
+.pet-card-content p {
+    margin: 8px 0;
+    line-height: 1.5;
+}
+
+
+/* ================================
+   Lost / Found Badge
+================================ */
+
+.report-badge {
+    display: inline-block;
+
+    padding: 6px 12px;
+
+    border-radius: 20px;
+
+    font-size: 13px;
+    font-weight: bold;
+
+    color: white;
+}
+
+.report-badge.lost {
+    background-color: #e74c3c;
+}
+
+.report-badge.found {
+    background-color: #27ae60;
+}
+
+/* ================================
+   Home Header
+================================ */
+
+.home-header {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+
+    align-items: center;
+
+    width: 100%;
+    margin-bottom: 45px;
+}
+
+.home-header h1 {
+    grid-column: 2;
+
+    margin: 0;
+    font-size: 38px;
+    text-align: center;
+}
+
+.user-section {
+    grid-column: 3;
+
+    justify-self: end;
+
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    white-space: nowrap;
+}
+
+.user-section span {
+    font-size: 16px;
+}
+
+.user-section button {
+    padding: 9px 16px;
+
+    border: none;
+    border-radius: 7px;
+
+    background-color: #333;
+    color: white;
+
+    font-size: 14px;
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+.user-section button:hover {
+    background-color: #555;
+}
+
+.home-header h1 {
+    grid-column: 2;
+
+    margin: 0;
+    font-size: 38px;
+    text-align: center;
+
+    transform: translateX(-95px);
+}
+
+/* ================================
+   Mobile
+================================ */
+
+@media (max-width: 700px) {
+
+    #root {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+
+    .pet-form {
+        padding: 20px;
+    }
+
+    .search-controls {
+        flex-direction: column;
+    }
+
+    .pet-image {
+        height: 240px;
+    }
+
+        .home-header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .home-header h1 {
+        font-size: 30px;
+    }
+
+    .user-section {
+        width: 100%;
+        justify-content: center;
+        gap: 12px;
+    }
+}
